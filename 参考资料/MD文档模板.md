@@ -37,7 +37,7 @@ $$E=mc^2$$
 
 ### 3. 高亮一段代码[^code]
 
-```python
+```python\
 @requires_authorization
 class SomeClass:
     pass
@@ -90,7 +90,7 @@ Bob-->Alice: I am good thanks!
 
 | 项目        | 价格   |  数量  |
 | --------   | -----:  | :----:  |
-| 计算机     | \$1600 |   5     |
+| 计算机      | \$1600 |   5     |
 | 手机        |   \$12   |   12   |
 | 管线        |    \$1    |  234  |
 
