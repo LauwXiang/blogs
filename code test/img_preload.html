@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        let = preloadImages = (imgArr) => {
+            imgArr.forEach((value, key) => {
+                let img = new Image();
+                img.src = value;
+                img.onload = () => {
+                    if (img.complete) {
+                        console.log(value + ' is successful');
+                    } else {
+                        console.log('I do not know what happened');
+                    }
+                };
+                img.onerror = () => {
+                    console.log(value + ' is failed');
+                }
+            })
+        };
+        preloadImages(['http://www.w3school.com.cn/ui2017/compatible_opera.png', 'http://www.w3school.com.cn/ui2017/compatible_firefox.png', '1.png']);
+    </script>
+</body>
+
+</html>
