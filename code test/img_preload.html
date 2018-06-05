@@ -6,28 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://image.tanwan.com/jsCommon/jquery-1.11.2.min.js"></script>
 
 </head>
 
 <body>
     <script type="text/javascript">
-        let = preloadImages = (imgArr) => {
-            imgArr.forEach((value, key) => {
-                let img = new Image();
-                img.src = value;
-                img.onload = () => {
-                    if (img.complete) {
-                        console.log(value + ' is successful');
-                    } else {
-                        console.log('I do not know what happened');
-                    }
-                };
-                img.onerror = () => {
-                    console.log(value + ' is failed');
-                }
-            })
-        };
-        preloadImages(['http://www.w3school.com.cn/ui2017/compatible_opera.png', 'http://www.w3school.com.cn/ui2017/compatible_firefox.png', '1.png']);
+        $('#content').on("mousewheel DOMMouseScroll", function(event) {
+            // chrome & ie || // firefox
+            var delta = (event.originalEvent.wheelDelta && (event.originalEvent.wheelDelta > 0 ? 1 : -1)) ||
+                (event.originalEvent.detail && (event.originalEvent.detail > 0 ? -1 : 1));
+            console.log()
+            if (delta > 0) {
+                console.log('mousewheel top');
+            } else if (delta < 0) {
+                console.log('mousewheel bottom');
+            }
+        });
     </script>
 </body>
 
